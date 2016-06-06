@@ -1,8 +1,13 @@
 # Deep Phonics
+Instead of using a Recurrent Neural Network for language modeling, let's see if it can teach us anything about spelling?
+
+--------------------------------------------------------------------
 
 This project builds from the work of [char-rnn-tensorflow](https://github.com/sherjilozair/char-rnn-tensorflow), itself inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn).
 
-Instead of using a Recurrent Neural Network for language modeling, let's see if it can teach us anything about spelling?
+--------------------------------------------------------------------
+
+## Scratchpad
 
 Train a LSTM RNN over a dictionary in a randomized order.
 
