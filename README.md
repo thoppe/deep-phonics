@@ -7,7 +7,7 @@ This project builds from the work of [char-rnn-tensorflow](https://github.com/sh
 
 --------------------------------------------------------------------
 
-!(figures/tsne_10.png)
+![](figures/tsne_10.png)
   
 --------------------------------------------------------------------
 
