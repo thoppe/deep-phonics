@@ -41,7 +41,7 @@
 	<section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h1>Deep Phonics</h1><a href="https://github.com/thoppe/arXiv2git">https://github.com/thoppe/deep-phonics</a></p>
+<h1>Deep Phonics</h1><a href="https://github.com/thoppe/deep-phonics">https://github.com/thoppe/deep-phonics</a></p>
 <hr>
 <p>
 <h3><a href="http://thoppe.github.io/">Travis Hoppe</a>, <a href="https://twitter.com/metasemantic">@metasemantic</a></h3></p>
@@ -61,9 +61,7 @@ Great for language modeling*. What's the next letter?<h3><code>The cat in the ha
 <br>
 <p>
 <div class="reference_footnote">*<a href="https://github.com/thoppe/RNN_science_titles">RNN Science titles</a>, DC Hack && Tell Round 26: <a href="(http://dc.hackandtell.org/2015/11/16/round-26.html">The Curious Camaraderie of Code</a></div></p>
-</section>
-</section><section class="vertical-stack">
-<section   class="vertical-slide">
+</section><section   class="vertical-slide">
 <p>
 <h3>Can we train the network to learn how to spell?</h3></p>
 <br>
@@ -75,10 +73,10 @@ Great for language modeling*. What's the next letter?<h3><code>The cat in the ha
     </figure>
 </section><section   class="vertical-slide">
 <p>
-<h3>Secrect sauce?</h3>Don't feed it sentences, give the network <strong>randomized</strong> word order.</p>
+<h3>Secret sauce?</h3>Don't feed it sentences, give the network <strong>randomized</strong> word order.</p>
 <br>
 <p>
-destitution outshone perfidious intestate autumn upswing usury perennially<br>cowgirl hovel chalet corrugated phantasmagoria xylophone union flippantly<br>craving willowy undersigned meningitis critically proofreader organist<br>segment cape letter savanna minimalism defector midstream potentate<br>blossom careless inherent confirmed exploratory lumberyard maverick<br>discourtesy statistical leeway pecan execute eggbeater enshroud weatherize<br>mainsail greedily outgrow sample wall befit desperate jostle momentous<br>blast mark acrimony loss benevolence bunion typhus subliminal refutation<br>inspire mischievousness lawlessness featherweight leisure drainpipe<br>polo strangler radiance office encephalitis stupendously airlift<br>slickly slacks dressy navigate duds pinch prime keep ammo deceptive<br>mafioso alternation overcast combative unbeknown photoelectric</p>
+destitution outshone perfidious intestate autumn upswing usury<br>cowgirl hovel chalet corrugated phantasmagoria xylophone union<br>craving willowy undersigned meningitis critically proofreader<br>segment cape letter savanna minimalism defector midstream<br>blossom careless inherent confirmed exploratory lumberyard<br>discourtesy statistical leeway pecan execute eggbeater enshroud<br>mainsail greedily outgrow sample wall befit desperate jostle<br>blast mark acrimony loss benevolence bunion typhus subliminal<br>inspire mischievousness lawlessness featherweight leisure<br>polo strangler radiance office encephalitis stupendously<br>slickly slacks dressy navigate duds pinch prime keep ammo<br>mafioso alternation overcast combative unbeknown</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -90,9 +88,7 @@ destitution outshone perfidious intestate autumn upswing usury perennially<br>co
 <li><code>batch_size=50</code></li>
 <li><code>seq_length=15</code></li>
 <li><code>num_epochs=30</code></li></ul>
-</section>
-</section><section class="vertical-stack">
-<section   class="vertical-slide">
+</section><section   class="vertical-slide">
 <p>
 <h2>Deep "spelling"</h2></p>
 <br>
@@ -101,9 +97,87 @@ Wanted a consensus spelling of many words, but not too specialized.<br>Initial i
 <br>
 <p>
 Used 6of12 dictionaries, removing all proper nouns and acronyms.<br>Fed the words in randomized, repeated all words 4 times.</p>
+<br>
+<p>
+Sample words from the network and see what happens...!?</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
+<p>
+<h2>Score words</h2>As you push words through the network, each letter selected gives a probability. Assign a <em>score</em> to each word s = -log(prod(p))</p>
+<figure>
+    <a href="figures/word_distributions.png">
+    <img class="" src="figures/word_distributions.png" height="600px">
+    </a>
+    
+    </figure>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3>Sampled seven letter words</h3>Imaginary words</p>
+<pre><code class=python>twigwee  4.044358     False
+uncoorn  4.178008     False
+eminate  4.240006     False
+wizable  4.249013     False
+icillic  4.320535     False
+rigtory  4.334869     False
+titting  4.543220     False
+upbland  4.549292     False
+idlener  4.578380     False
+gumborn  4.607096     False</code></pre>
+<p>
+Real words</p>
+<pre><code class=python>untruth  2.792500      True
+ringlet  3.114211      True
+missing  3.312544      True
+trumpet  3.356997      True
+mestizo  3.444021      True
+
+roadway  14.202039      True
+stupefy  14.227516      True
+dismiss  14.672120      True
+nightly  14.861044      True
+tsunami  15.432922      True
+cantata  15.943768      True</code></pre>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>RNN Ipsum</h2></p>
+<br>
+<p>
+Trappe curient hectar loads, jit trucket haddy kleptoman wooel. Libelor ransor metis, edificently cocklesh wize hoo, furthorn sumptuously marma. Grote reeker welf joal, ison unmovel bridesman orn. Cordoner thromb laburna kowhead. Jets scoutman ballry, ostraciders agogy wilfulate a. Immortent ordan whick. Ovi bystan toge jit meni coby viscounce drychange. Askay smilt voodom, reunity hairdoor, gnorthiness ex. Spasion aquet sagebruch knavi sagebruch meniment diora. Grimlet orn askay ful earant chiropon impobiacy. Chainous harpistry olean yiem easth arrayo menorama. Warthoge buryard jaunch remoss golfhound. Raker drak rheost, everywork dreamable, axister coby nill.</p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+Cluster words on the network <strong>imprint</strong> after a word is pushed through.</p>
+<figure>
+    <a href="figures/tsne_10.png">
+    <img class="" src="figures/tsne_10.png" height="700px">
+    </a>
+    <figcaption>tSNE shows distinct clusters of spelling patterns, <code>-ible</code></figcaption>
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+Cluster words on the network <strong>imprint</strong> after a word is pushed through.</p>
+<figure>
+    <a href="figures/tsne_9.png">
+    <img class="" src="figures/tsne_9.png" height="700px">
+    </a>
+    <figcaption>tSNE shows distinct clusters of spelling pattern, <code>-tive</code></figcaption>
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+Cluster words on the network <strong>imprint</strong> after a word is pushed through.</p>
+<figure>
+    <a href="figures/tsne_8.png">
+    <img class="" src="figures/tsne_8.png" height="700px">
+    </a>
+    <figcaption>tSNE shows distinct clusters of spelling patterns, <code>-ous</code></figcaption>
+    </figure>
+</section><section   class="vertical-slide">
 <p>
 <h1>Thanks, you!</h1>Say hello: <a href="https://twitter.com/metasemantic">@metasemantic</a></p>
 </section>
