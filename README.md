@@ -1,4 +1,4 @@
-# arXiv2git
-presentations
+# Deep Phonics
 
-[http://thoppe.github.io/arXiv2git/HnT_pres.html#/](http://thoppe.github.io/arXiv2git/HnT_pres.html#/)
+### Presentations
+[http://thoppe.github.io/deep-phonics/HnT_pres.html#/](http://thoppe.github.io/deep-phonics/HnT_pres.html#/)
