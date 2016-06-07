@@ -2,10 +2,14 @@
 [https://github.com/thoppe/deep-phonics](https://github.com/thoppe/deep-phonics)
 ----------
 ### [Travis Hoppe](http://thoppe.github.io/), [@metasemantic](https://twitter.com/metasemantic)
+
+!(figures/breaking_bad.mp4) <<height:420px>>
+
 ====
 
 ### Recurrent Neural Networks
-!(figures/RNN_example.jpg)
+!(figures/RNN_example.jpg) <<height:300px>>
+!(figures/simpsons.mp4) <<height:310px>>
 Great for language modeling*. What's the next letter?
 ### `The cat in the ha`
   
@@ -13,10 +17,12 @@ Great for language modeling*. What's the next letter?
   
 =====*
 
-### Can we train the network to learn how to spell?
-
+### Can we train a network to
+### learn how to spell?
 !(figures/spelling_bee.mp4) Scripps spelling bee: academic bloodsport for kids
 
+Does this teach us anything unique about language?
+  
 ====*
 
 ### Secret sauce?
@@ -109,8 +115,7 @@ Cluster words on the network *imprint* after a word is pushed through.
 Cluster words on the network *imprint* after a word is pushed through.
 !(figures/tsne_8.png) <<height:700px>> tSNE shows distinct clusters of spelling patterns, `-ous`
   
-====*
-
+====
     
 #  Thanks, you!
 Say hello: [@metasemantic](https://twitter.com/metasemantic)
