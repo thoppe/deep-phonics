@@ -41,15 +41,66 @@
 	<section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h1>Deep Phonics</h1></p>
+<h1>Deep Phonics</h1><a href="https://github.com/thoppe/arXiv2git">https://github.com/thoppe/deep-phonics</a></p>
 <hr>
 <p>
-<h3><a href="http://thoppe.github.io/">Travis Hoppe</a>, <a href="https://twitter.com/metasemantic">@metasemantic</a></h3><a href="https://github.com/thoppe/arXiv2git">https://github.com/thoppe/deep-phonics</a></p>
+<h3><a href="http://thoppe.github.io/">Travis Hoppe</a>, <a href="https://twitter.com/metasemantic">@metasemantic</a></h3></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-Content</p>
+<h3>Recurrent Neural Networks</h3></p>
+<figure>
+    <a href="figures/RNN_example.jpg">
+    <img class="" src="figures/RNN_example.jpg" >
+    </a>
+    
+    </figure>
+<p>
+Great for language modeling*. What's the next letter?<h3><code>The cat in the ha</code></h3></p>
+<br>
+<p>
+<div class="reference_footnote">*<a href="https://github.com/thoppe/RNN_science_titles">RNN Science titles</a>, DC Hack && Tell Round 26: <a href="(http://dc.hackandtell.org/2015/11/16/round-26.html">The Curious Camaraderie of Code</a></div></p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h3>Can we train the network to learn how to spell?</h3></p>
+<br>
+<figure>
+    <video autoplay loop >  
+    <source src="figures/spelling_bee.mp4" type="video/mp4"> 
+    </video>
+    <figcaption>Scripps spelling bee: academic bloodsport for kids</figcaption>
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+<h3>Secrect sauce?</h3>Don't feed it sentences, give the network <strong>randomized</strong> word order.</p>
+<br>
+<p>
+destitution outshone perfidious intestate autumn upswing usury perennially<br>cowgirl hovel chalet corrugated phantasmagoria xylophone union flippantly<br>craving willowy undersigned meningitis critically proofreader organist<br>segment cape letter savanna minimalism defector midstream potentate<br>blossom careless inherent confirmed exploratory lumberyard maverick<br>discourtesy statistical leeway pecan execute eggbeater enshroud weatherize<br>mainsail greedily outgrow sample wall befit desperate jostle momentous<br>blast mark acrimony loss benevolence bunion typhus subliminal refutation<br>inspire mischievousness lawlessness featherweight leisure drainpipe<br>polo strangler radiance office encephalitis stupendously airlift<br>slickly slacks dressy navigate duds pinch prime keep ammo deceptive<br>mafioso alternation overcast combative unbeknown photoelectric</p>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>"Deep" spelling</h2>LSTM RNN (modeled after <a href="https://github.com/karpathy/char-rnn">char-rnn</a> by Karparthy)<br>Coded in <code>tensorflow</code>, deep learning library by Google.<br>Train time, ~4 hours on a GTX 980.</p>
+<br>
+<ul><li><code>layers=2</code></li>
+<li><code>width=1024</code></li>
+<li><code>batch_size=50</code></li>
+<li><code>seq_length=15</code></li>
+<li><code>num_epochs=30</code></li></ul>
+</section>
+</section><section class="vertical-stack">
+<section   class="vertical-slide">
+<p>
+<h2>Deep "spelling"</h2></p>
+<br>
+<p>
+Wanted a consensus spelling of many words, but not too specialized.<br>Initial input from Wikipedia (freq > 500), too abstract.</p>
+<br>
+<p>
+Used 6of12 dictionaries, removing all proper nouns and acronyms.<br>Fed the words in randomized, repeated all words 4 times.</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
