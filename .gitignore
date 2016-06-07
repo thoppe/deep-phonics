@@ -1,0 +1,4 @@
+*~
+  
+# Ignore all input files (we can build these)
+*input.txt
